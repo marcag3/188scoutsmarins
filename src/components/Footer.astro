@@ -1,0 +1,60 @@
+---
+import { site } from '../data/site';
+import RedRule from './ui/RedRule.astro';
+---
+
+<footer>
+  <RedRule />
+  <div class="bg-navy px-4 py-10 text-white">
+    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3 md:px-6">
+      <div class="space-y-4 text-center md:text-left">
+        <img
+          src="/images/logo.jpg"
+          alt={`Logo ${site.name}`}
+          class="mx-auto h-20 w-20 rounded-full border-2 border-white md:mx-0"
+          width="80"
+          height="80"
+        />
+        <p class="text-sm text-white/80">{site.affiliation}</p>
+      </div>
+
+      <div class="space-y-3 text-center md:text-left">
+        <h2 class="label-caps text-white/60">Contact</h2>
+        <p class="text-sm text-white/90">{site.meetingInfo}</p>
+        <a href={`mailto:${site.email}`} class="text-sm font-semibold text-red hover:underline">
+          {site.email}
+        </a>
+      </div>
+
+      <div class="space-y-3 text-center md:text-left">
+        <h2 class="label-caps text-white/60">Suivez-nous</h2>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={site.social.facebook} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href={site.social.instagram} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href={site.social.tiktok} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
+              TikTok
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="tagline-serif mx-auto mt-10 max-w-xl text-center">
+      Et puis&hellip; <span class="text-red">Embarques-tu?</span>
+    </p>
+  </div>
+
+  <!-- Fine-print bar (black strip from pub) -->
+  <div class="bg-black px-4 py-3 text-center text-xs text-white/80">
+    <p>© {new Date().getFullYear()} {site.name} — {site.location}</p>
+  </div>
+</footer>

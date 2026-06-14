@@ -1,0 +1,33 @@
+---
+interface Props {
+  action?: string;
+  class?: string;
+}
+
+const { action = 'https://formspree.io/f/placeholder', class: className = '' } = Astro.props;
+
+const inputClass =
+  'w-full rounded-md border border-grey-light bg-white px-4 py-3 text-navy placeholder:text-grey focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20';
+const labelClass = 'mb-1 block text-sm font-semibold uppercase tracking-wide text-navy';
+---
+
+<form action={action} method="POST" class:list={['space-y-5', className]}>
+  <div>
+    <label for="nom" class={labelClass}>Nom *</label>
+    <input id="nom" name="nom" type="text" required class={inputClass} autocomplete="name" />
+  </div>
+  <div>
+    <label for="email" class={labelClass}>Courriel *</label>
+    <input id="email" name="email" type="email" required class={inputClass} autocomplete="email" />
+  </div>
+  <div>
+    <label for="message" class={labelClass}>Message *</label>
+    <textarea id="message" name="message" rows="5" required class={inputClass}></textarea>
+  </div>
+  <button
+    type="submit"
+    class="inline-flex items-center justify-center rounded-md bg-red px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors hover:bg-red-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+  >
+    Envoyer
+  </button>
+</form>

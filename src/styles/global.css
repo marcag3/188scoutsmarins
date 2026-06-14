@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* From Pub MédiasSociauxBaseNautique2026.pdf + logo */
+  --color-navy: #0a1a3a;
+  --color-navy-light: #132a52;
+  --color-red: #d71920;
+  --color-red-dark: #a81218;
+  --color-sand: #f5f2ec;
+  --color-grey: #8a9199;
+  --color-grey-light: #d1d5db;
+
+  --font-marker: "Permanent Marker", cursive;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-accent: "Kristen ITC", "Kristi", cursive;
+}
+
+@font-face {
+  font-family: "Kristen ITC";
+  src: url("/fonts/kristen-itc.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-[family-name:var(--font-body)] text-navy antialiased;
+  }
+}
+
+@layer components {
+  /* Marker headlines — "Viens RAMER avec NOUS!" style from Base Nautique pub */
+  .marker-xl {
+    @apply font-[family-name:var(--font-marker)] text-4xl leading-tight normal-case tracking-normal text-white md:text-6xl lg:text-7xl;
+  }
+
+  .marker-lg {
+    @apply font-[family-name:var(--font-marker)] text-3xl leading-tight normal-case md:text-5xl;
+  }
+
+  .marker-md {
+    @apply font-[family-name:var(--font-marker)] text-2xl leading-tight normal-case md:text-3xl;
+  }
+
+  /* Section labels inside info boxes */
+  .label-caps {
+    @apply text-sm font-bold uppercase tracking-widest text-navy;
+  }
+
+  /* Footer tagline — "Embarques-tu?" serif italic from pub */
+  .tagline-serif {
+    @apply font-[family-name:var(--font-serif)] text-2xl italic text-white md:text-3xl;
+  }
+
+  .accent-script {
+    @apply font-[family-name:var(--font-accent)] normal-case tracking-normal;
+  }
+
+  /* Thick red rule between content blocks */
+  .red-rule {
+    @apply h-1 w-full border-0 bg-red;
+  }
+
+  /* White box with thick navy border — dates, location, CTA from pub */
+  .info-box {
+    @apply border-4 border-navy bg-white px-5 py-4 text-center text-navy shadow-md;
+  }
+
+  .prose-scout {
+    @apply max-w-none text-base leading-relaxed text-navy/90;
+
+    & h2 {
+      @apply mb-4 mt-8 font-[family-name:var(--font-marker)] text-3xl normal-case text-navy;
+    }
+
+    & h3 {
+      @apply mb-3 mt-6 text-lg font-bold uppercase tracking-wide text-navy;
+    }
+
+    & p {
+      @apply mb-4;
+    }
+
+    & a {
+      @apply text-red underline-offset-2 hover:underline;
+    }
+
+    & ul {
+      @apply mb-4 list-disc space-y-2 pl-6;
+    }
+
+    & table {
+      @apply mb-6 w-full border-collapse overflow-hidden;
+    }
+
+    & th {
+      @apply border-4 border-navy bg-navy px-4 py-3 text-left text-sm font-bold uppercase tracking-wide text-white;
+    }
+
+    & td {
+      @apply border-2 border-navy/20 px-4 py-3;
+    }
+  }
+}

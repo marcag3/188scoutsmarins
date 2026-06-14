@@ -1,0 +1,65 @@
+---
+interface Props {
+  variant?: 'navy' | 'light' | 'sand' | 'red';
+  arc?: 'top' | 'bottom' | 'both' | 'none';
+  class?: string;
+  id?: string;
+}
+
+const {
+  variant = 'light',
+  arc = 'none',
+  class: className = '',
+  id,
+} = Astro.props;
+
+const variants = {
+  navy: 'bg-navy text-white',
+  light: 'bg-white text-navy',
+  sand: 'bg-sand text-navy',
+  red: 'bg-red text-white',
+};
+
+const arcTop = arc === 'top' || arc === 'both';
+const arcBottom = arc === 'bottom' || arc === 'both';
+---
+
+<section id={id} class:list={['relative', variants[variant], className]}>
+  {
+    arcTop && (
+      <div
+        class="pointer-events-none absolute -top-px left-0 right-0 h-12 overflow-hidden leading-none md:h-16"
+        aria-hidden="true"
+      >
+        <svg
+          class="h-full w-full"
+          viewBox="0 0 1440 64"
+          preserveAspectRatio="none"
+          fill="currentColor"
+        >
+          <path d="M0,64 L0,32 Q720,0 1440,32 L1440,64 Z" class="text-white" />
+        </svg>
+      </div>
+    )
+  }
+  <div class="relative mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <slot />
+  </div>
+  {
+    arcBottom && (
+      <div
+        class="pointer-events-none absolute -bottom-px left-0 right-0 h-12 overflow-hidden leading-none md:h-16"
+        aria-hidden="true"
+      >
+        <svg
+          class="h-full w-full"
+          viewBox="0 0 1440 64"
+          preserveAspectRatio="none"
+          fill="currentColor"
+        >
+          <path d="M0,0 L0,32 Q720,64 1440,32 L1440,0 Z" class="text-white" />
+        </svg>
+      </div>
+    )
+  }
+</section>

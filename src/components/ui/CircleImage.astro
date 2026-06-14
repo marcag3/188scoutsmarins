@@ -1,0 +1,26 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
+}
+
+const { src, alt, size = 'md', class: className = '' } = Astro.props;
+
+const sizes = {
+  sm: 'h-28 w-28',
+  md: 'h-40 w-40 md:h-48 md:w-48',
+  lg: 'h-56 w-56 md:h-64 md:w-64',
+};
+---
+
+<div
+  class:list={[
+    'shrink-0 overflow-hidden rounded-full border-4 border-red bg-navy p-1 shadow-lg',
+    sizes[size],
+    className,
+  ]}
+>
+  <img src={src} alt={alt} class="h-full w-full rounded-full object-cover" loading="lazy" />
+</div>

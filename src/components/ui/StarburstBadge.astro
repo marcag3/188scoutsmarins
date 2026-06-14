@@ -1,0 +1,26 @@
+---
+interface Props {
+  label: string;
+  class?: string;
+}
+
+const { label, class: className = '' } = Astro.props;
+---
+
+<div class:list={['relative inline-flex h-20 w-20 items-center justify-center md:h-24 md:w-24', className]}>
+  <svg
+    class="absolute inset-0 h-full w-full drop-shadow-md"
+    viewBox="0 0 100 100"
+    aria-hidden="true"
+  >
+    <polygon
+      points="50,2 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
+      fill="white"
+      stroke="#0a1a3a"
+      stroke-width="2"
+    />
+  </svg>
+  <span class="relative z-10 px-2 text-center text-xs font-bold uppercase leading-tight text-navy md:text-sm">
+    {label}
+  </span>
+</div>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  lead?: string;
+}
+
+const { title, description, lead } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Section variant="sand" class="!py-10">
+    <header class="max-w-3xl">
+      <h1 class="marker-lg text-navy">{title}</h1>
+      {lead && <p class="mt-4 text-lg text-navy/80">{lead}</p>}
+    </header>
+  </Section>
+  <Section variant="light">
+    <article class="prose-scout mx-auto max-w-3xl">
+      <slot />
+    </article>
+  </Section>
+</BaseLayout>

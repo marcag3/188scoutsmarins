@@ -1,0 +1,21 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  class?: string;
+}
+
+const { src, alt, caption, class: className = '' } = Astro.props;
+---
+
+<figure class:list={['inline-block', className]}>
+  <div class="overflow-hidden border-4 border-red bg-white p-1 shadow-lg">
+    <img src={src} alt={alt} class="block max-h-48 w-auto object-cover md:max-h-56" loading="lazy" />
+  </div>
+  {caption && (
+    <figcaption class="mt-2 max-w-xs text-center text-sm font-semibold text-white drop-shadow-md">
+      {caption}
+    </figcaption>
+  )}
+</figure>

@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import InfoBox from '../components/ui/InfoBox.astro';
+import InsetPhoto from '../components/ui/InsetPhoto.astro';
+import StarburstBadge from '../components/ui/StarburstBadge.astro';
+import RedRule from '../components/ui/RedRule.astro';
+import ContactForm from '../components/ContactForm.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
+import PartnerGrid from '../components/PartnerGrid.astro';
+import CalendarEmbed from '../components/CalendarEmbed.astro';
+
+const placeholderAlbums = [
+  { title: "Camp d'été", year: 2021, cover: '/images/photos/scout-marin10.jpg', href: '#' },
+  { title: 'Base nautique', year: 2024, cover: '/images/photos/20240812_111542.jpg', href: '#' },
+];
+
+const placeholderPartners = [{ name: 'AABP' }, { name: 'Partenaire' }];
+---
+
+<BaseLayout title="Guide de style" description="Design system basé sur Pub MédiasSociauxBaseNautique2026.pdf">
+  <Section variant="navy" class="!py-10">
+    <h1 class="marker-xl">Guide de style</h1>
+    <p class="mt-4 max-w-2xl text-white/80">
+      Inspiré principalement de <strong>Pub MédiasSociauxBaseNautique2026.pdf</strong>. Voir aussi
+      <code class="text-red">design/base-nautique-pub-reference.png</code>.
+    </p>
+  </Section>
+
+  <Section variant="light" id="typography">
+    <h2 class="marker-lg mb-8 text-navy">Typographie</h2>
+    <div class="space-y-6">
+      <p class="marker-xl text-navy">Marker XL — Permanent Marker</p>
+      <p class="marker-lg text-navy">Marker LG</p>
+      <p class="tagline-serif text-navy">Et puis&hellip; Embarques-tu? — Lora italic</p>
+      <p class="label-caps">Label caps — Source Sans 3</p>
+      <p class="text-base">Corps de texte pour paragraphes et formulaires.</p>
+    </div>
+  </Section>
+
+  <RedRule />
+
+  <Section variant="sand" id="info-boxes">
+    <h2 class="marker-lg mb-8 text-navy">Boîtes d'info (pub)</h2>
+    <div class="mx-auto flex max-w-sm flex-col gap-0">
+      <InfoBox>
+        <p class="label-caps">Dates</p>
+        <p class="mt-1 text-lg font-bold">28 juin</p>
+      </InfoBox>
+      <InfoBox>
+        <p class="label-caps">Heures</p>
+        <p class="mt-1 text-lg font-bold">10 h à 18 h</p>
+      </InfoBox>
+      <InfoBox>
+        <p class="label-caps">Lieu</p>
+        <p class="mt-1 text-lg font-bold">Parc Henri-Bourassa</p>
+      </InfoBox>
+      <a href="#" class="info-box block">
+        <p class="text-lg font-bold uppercase">Inscris-toi ici</p>
+      </a>
+    </div>
+  </Section>
+
+  <Section variant="light" id="badges">
+    <h2 class="marker-lg mb-8 text-navy">Éclats & encadrés</h2>
+    <div class="flex flex-wrap items-start gap-8">
+      <StarburstBadge label="Gratuit" />
+      <StarburstBadge label="2e Édition" />
+      <InsetPhoto
+        src="/images/photos/scout-marin10.jpg"
+        alt="Exemple"
+        caption="Expérience unique en soirée"
+      />
+    </div>
+  </Section>
+
+  <RedRule />
+
+  <Section variant="light" id="form">
+    <h2 class="marker-lg mb-8 text-navy">Formulaire</h2>
+    <div class="max-w-lg">
+      <ContactForm />
+    </div>
+  </Section>
+
+  <Section variant="sand" id="photos">
+    <h2 class="marker-lg mb-8 text-navy">Photos</h2>
+    <PhotoGrid albums={placeholderAlbums} />
+  </Section>
+
+  <Section variant="navy" id="calendar">
+    <h2 class="marker-lg mb-8 text-center text-white">Calendrier</h2>
+    <CalendarEmbed />
+  </Section>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+import Button from './ui/Button.astro';
+
+interface Props {
+  title?: string;
+  text?: string;
+  href?: string;
+  buttonLabel?: string;
+}
+
+const {
+  title = 'Inscriptions en cours',
+  text = 'Rejoignez-nous pour une saison d\'aventures nautiques et scoutistes.',
+  href = '/a-propos/inscription-2/',
+  buttonLabel = "S'inscrire",
+} = Astro.props;
+---
+
+<aside class="bg-red text-white">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center md:flex-row md:px-6 md:text-left">
+    <div>
+      <h2 class="display-md text-white">{title}</h2>
+      <p class="mt-1 text-white/90">{text}</p>
+    </div>
+    <Button href={href} variant="secondary">{buttonLabel}</Button>
+  </div>
+</aside>

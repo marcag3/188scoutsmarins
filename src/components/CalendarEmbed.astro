@@ -1,0 +1,20 @@
+---
+interface Props {
+  src?: string;
+  title?: string;
+}
+
+const {
+  src = 'https://calendar.google.com/calendar/embed?src=placeholder',
+  title = 'Calendrier des activités',
+} = Astro.props;
+---
+
+<div class="overflow-hidden rounded-lg border border-grey-light/60 bg-white shadow-sm">
+  <iframe
+    src={src}
+    title={title}
+    class="aspect-[4/3] w-full min-h-[400px] border-0 md:aspect-auto md:min-h-[500px]"
+    loading="lazy"
+  />
+</div>

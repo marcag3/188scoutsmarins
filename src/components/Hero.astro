@@ -1,0 +1,79 @@
+---
+import { site } from '../data/site';
+import InfoBox from './ui/InfoBox.astro';
+import InsetPhoto from './ui/InsetPhoto.astro';
+import StarburstBadge from './ui/StarburstBadge.astro';
+import RedRule from './ui/RedRule.astro';
+
+interface Props {
+  imageSrc?: string;
+  imageAlt?: string;
+  headline?: string;
+  insetSrc?: string;
+  insetCaption?: string;
+}
+
+const {
+  imageSrc = '/images/photos/IMG_2020.JPG',
+  imageAlt = 'Scouts marins sur l\'eau',
+  headline = 'Viens vivre des aventures avec NOUS!',
+  insetSrc = '/images/photos/scout-marin10.jpg',
+  insetCaption = 'Réunions les vendredis 19h–21h',
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden">
+  <!-- Navy headline band (from pub top bar) -->
+  <div class="bg-navy px-4 py-6 text-center md:py-8">
+    <h1 class="marker-xl">{headline}</h1>
+  </div>
+
+  <!-- Full-bleed photo with overlay content -->
+  <div class="relative min-h-[32rem] md:min-h-[36rem]">
+    <img
+      src={imageSrc}
+      alt={imageAlt}
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-navy/30" aria-hidden="true" />
+
+    <!-- Inset photo + starbursts (top-left, from pub) -->
+    <div class="absolute left-4 top-4 z-10 flex flex-col gap-3 md:left-8 md:top-8">
+      <InsetPhoto src={insetSrc} alt="Activité scout" caption={insetCaption} />
+      <div class="flex gap-2">
+        <StarburstBadge label="9 ans+" />
+        <StarburstBadge label="Marin" />
+      </div>
+    </div>
+
+    <!-- Stacked info boxes (right side, from pub) -->
+    <div class="absolute bottom-4 right-4 z-10 flex w-56 flex-col gap-0 md:bottom-8 md:right-8 md:w-64">
+      <InfoBox>
+        <p class="label-caps">Montréal-Nord</p>
+        <p class="mt-1 text-lg font-bold">188e groupe scout marin</p>
+      </InfoBox>
+      <InfoBox>
+        <p class="label-caps">Réunions</p>
+        <p class="mt-1 text-lg font-bold">Vendredis 19h – 21h</p>
+      </InfoBox>
+      <InfoBox>
+        <p class="label-caps">Lieu</p>
+        <p class="mt-1 text-lg font-bold">Parc Henri-Bourassa</p>
+      </InfoBox>
+      <a href="/a-propos/inscription-2/" class="info-box block transition hover:bg-sand">
+        <p class="text-lg font-bold uppercase tracking-wide">Inscris-toi ici</p>
+      </a>
+    </div>
+  </div>
+
+  <RedRule />
+
+  <!-- Navy footer strip — "Embarques-tu?" from pub -->
+  <div class="bg-navy px-4 py-8 text-center">
+    <p class="tagline-serif">
+      Et puis&hellip; <span class="underline decoration-red decoration-2 underline-offset-4">Embarques-tu?</span>
+    </p>
+    <p class="mx-auto mt-4 max-w-2xl text-sm text-white/80">{site.tagline}</p>
+  </div>
+</section>

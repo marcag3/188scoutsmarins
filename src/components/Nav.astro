@@ -1,0 +1,76 @@
+---
+import { navigation } from '../data/site';
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
+  {
+    navigation.map((item) => (
+      <div class="group relative">
+        <a
+          href={item.href}
+          class:list={[
+            'rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wide transition-colors',
+            currentPath.startsWith(item.href)
+              ? 'bg-red text-white'
+              : 'text-white hover:bg-white/10',
+          ]}
+        >
+          {item.label}
+        </a>
+        {item.children && (
+          <div class="invisible absolute left-0 top-full z-50 min-w-48 pt-1 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+            <div class="rounded-md border border-white/10 bg-navy-light py-2 shadow-xl">
+              {item.children.map((child) => (
+                <a
+                  href={child.href}
+                  class:list={[
+                    'block px-4 py-2 text-sm font-medium text-white hover:bg-white/10',
+                    currentPath === child.href && 'text-red',
+                  ]}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    ))
+  }
+</nav>
+
+<!-- Mobile nav -->
+<details class="group relative lg:hidden">
+  <summary
+    class="flex cursor-pointer list-none items-center gap-2 rounded-md border border-white/20 px-3 py-2 text-sm font-semibold uppercase tracking-wide text-white marker:content-none"
+  >
+    Menu
+    <svg class="h-4 w-4 transition group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+    </svg>
+  </summary>
+  <div class="absolute right-0 top-full z-50 mt-2 w-64 rounded-md border border-white/10 bg-navy-light py-2 shadow-xl">
+    {
+      navigation.map((item) => (
+        <>
+          <a
+            href={item.href}
+            class="block px-4 py-2 text-sm font-semibold uppercase text-white hover:bg-white/10"
+          >
+            {item.label}
+          </a>
+          {item.children?.map((child) => (
+            <a
+              href={child.href}
+              class="block py-2 pl-8 pr-4 text-sm text-white/80 hover:bg-white/10"
+            >
+              {child.label}
+            </a>
+          ))}
+        </>
+      ))
+    }
+  </div>
+</details>
