@@ -8,7 +8,8 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install",
+  "remoteUser": "node",
+  "postCreateCommand": "npm install && chown -R node:node node_modules",
   "customizations": {
     "vscode": {
       "extensions": [
