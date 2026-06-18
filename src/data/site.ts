@@ -14,6 +14,9 @@ export const site = {
   meetingInfo: `Réunions les ${sentenceCase(general.meetingSchedule)} au ${sentenceCase(general.meetingLocation)}`,
   social: general.social,
   affiliation: "Membre de l'association des aventuriers de Baden-Powell",
+  affiliationName: "Association des aventuriers de Baden-Powell",
+  affiliationUrl: "https://aventuriersdebadenpowell.org/",
+  affiliationLogo: "/images/photos/logo-aabp-1024.jpg",
 } as const;
 
 export type NavItem = {

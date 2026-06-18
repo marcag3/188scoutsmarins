@@ -1,62 +1,89 @@
 ---
 import { site } from '../data/site';
 import RedRule from './ui/RedRule.astro';
+
+const socialLinks = [
+  { label: 'Facebook', href: site.social.facebook },
+  { label: 'Instagram', href: site.social.instagram },
+  { label: 'TikTok', href: site.social.tiktok },
+] as const;
 ---
 
 <footer>
   <RedRule />
-  <div class="bg-navy px-4 py-10 text-white">
-    <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-3 md:px-6">
-      <div class="space-y-4 text-center md:text-left">
-        <img
-          src="/images/logo.jpg"
-          alt={`Logo ${site.name}`}
-          class="mx-auto h-20 w-20 rounded-full border-2 border-white md:mx-0"
-          width="80"
-          height="80"
-        />
-        <p class="text-sm text-white/80">{site.affiliation}</p>
+  <div class="bg-navy text-white">
+    <div class="mx-auto max-w-6xl px-4 py-8 md:px-6">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+        <div class="text-center sm:col-span-2 sm:text-left lg:col-span-1">
+          <a href="/" class="inline-flex items-center gap-4">
+            <img
+              src="/images/logo.jpg"
+              alt={`Logo ${site.name}`}
+              class="h-16 w-16 shrink-0 rounded-full border-2 border-white object-cover"
+              width="64"
+              height="64"
+            />
+            <div class="text-left">
+              <p class="font-[family-name:var(--font-marker)] text-xl leading-tight text-white">
+                {site.name}
+              </p>
+              <p class="text-sm text-white/70">{site.subtext}</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="space-y-2 text-center sm:text-left">
+          <h2 class="text-sm font-bold uppercase tracking-widest text-white/60">Contact</h2>
+          <p class="text-sm leading-relaxed text-white/90">{site.meetingInfo}</p>
+          <a href="/contact/" class="inline-block text-sm font-semibold text-red hover:underline">
+            Nous écrire
+          </a>
+        </div>
+
+        <div class="space-y-2 text-center sm:text-left">
+          <h2 class="text-sm font-bold uppercase tracking-widest text-white/60">Suivez-nous</h2>
+          <ul class="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:justify-start">
+            {
+              socialLinks.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="text-sm text-white/80 hover:text-red"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
 
-      <div class="space-y-3 text-center md:text-left">
-        <h2 class="label-caps text-white/60">Contact</h2>
-        <p class="text-sm text-white/90">{site.meetingInfo}</p>
-        <a href="/contact/" class="text-sm font-semibold text-red hover:underline">
-          Nous écrire
+      <div class="mt-6 border-t border-white/10 pt-6">
+        <a
+          href={site.affiliationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex flex-col items-center gap-2 sm:flex-row sm:justify-center lg:justify-start"
+        >
+          <img
+            src={site.affiliationLogo}
+            alt={site.affiliationName}
+            class="h-10 w-10 shrink-0 rounded bg-white p-0.5 object-contain"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+          <span class="max-w-sm text-center text-sm text-white/80 group-hover:text-white sm:max-w-none sm:text-left">
+            {site.affiliation}
+          </span>
         </a>
       </div>
-
-      <div class="space-y-3 text-center md:text-left">
-        <h2 class="label-caps text-white/60">Suivez-nous</h2>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href={site.social.facebook} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a href={site.social.instagram} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a href={site.social.tiktok} class="text-white/80 hover:text-red" target="_blank" rel="noopener noreferrer">
-              TikTok
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="mx-auto mt-12 max-w-2xl text-center">
-      <p class="tagline-serif">
-        Et puis&hellip; <span class="text-red">Embarques-tu?</span>
-      </p>
-      <p class="mt-4 text-sm text-white/80">{site.tagline}</p>
     </div>
   </div>
 
-  <!-- Fine-print bar (black strip from pub) -->
   <div class="bg-black px-4 py-3 text-center text-xs text-white/80">
     <p>© {new Date().getFullYear()} {site.name} — {site.location}</p>
   </div>

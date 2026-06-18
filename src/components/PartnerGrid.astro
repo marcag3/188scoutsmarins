@@ -3,6 +3,7 @@ interface Partner {
   name: string;
   logo?: string;
   href?: string;
+  color?: boolean;
 }
 
 interface Props {
@@ -19,7 +20,10 @@ const { partners } = Astro.props;
         <img
           src={partner.logo}
           alt={partner.name}
-          class="max-h-16 max-w-[140px] object-contain grayscale transition hover:grayscale-0"
+          class:list={[
+            'max-h-16 max-w-[140px] object-contain',
+            !partner.color && 'grayscale transition hover:grayscale-0',
+          ]}
           loading="lazy"
         />
       ) : (
