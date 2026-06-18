@@ -1,6 +1,6 @@
 ---
 title: "Éclaireurs / Guides (12-17 ans)"
-description: "Troupe marine Trident — éclaireurs et guides du 188e scout marin de Montréal-Nord"
+description: "La Branche verte du 188e scout marin — troupe marine Trident"
 path: "troupe"
 layout: default
 order: 6
@@ -10,9 +10,13 @@ draft: false
 
 *La troupe marine Trident devant l'horizon, à bord d'Atalante 2 — été 2021*
 
-**Troupe marine Trident**, c'est la branche des **éclaireurs et guides** du **188e groupe scout marin de Montréal-Nord**. Fondée en 2005, elle rassemble une vingtaine de jeunes de tous horizons qui ont le goût de l'aventure — sur l'eau comme sur la terre ferme.
+**La Branche verte**, c'est la **troupe marine Trident** du **188e groupe scout marin de Montréal-Nord** — la branche des **éclaireurs et guides**. Fondée en 2005, elle rassemble une vingtaine de jeunes de tous horizons qui ont le goût de l'aventure, sur l'eau comme sur la terre ferme.
 
-Chez Trident, on apprend à se débrouiller en équipe : naviguer sur les bateaux de la **Corporation des Scouts Marins du Grand Montréal**, monter un camp, résoudre des défis techniques et prendre des responsabilités au sein de sa patrouille. C'est l'étape où le scoutisme devient vraiment concret.
+À la Branche verte, on prend inspiration du livre *Éclaireur* publié par Baden-Powell en 1907. Les jeunes sont organisés en **patrouilles** qui ont pour but d'être des entités **autonomes** dans la mesure du possible. Les patrouilles ont toutes un **chef** et un **second**, en plus d'avoir de nombreux rôles répartis parmi tous les membres, appelés **postes d'action**.
+
+Les patrouilles sont encadrées par le **chef de la troupe** et ses assistants, qui ont pour but de les aider à développer leur débrouillardise, leur caractère, leur sens du service et leur santé. Pour ce faire, on privilégie l'**apprentissage par le jeu**. La patrouille et les responsabilités qu'ils et elles auront servent d'outils pour favoriser leur développement.
+
+Typiquement, la Branche verte tient **un camp par saison**, qui peuvent varier de quelques jours à quelques semaines. Chez Trident, cela inclut formations, grands jeux techniques, camps d'hiver et **camps marins** sur le fleuve Saint-Laurent — navigation sur les bateaux de la **Corporation des Scouts Marins du Grand Montréal**, secourisme, nœuds, orientation, camping en forêt et initiation à la plongée sous-marine.
 
 ## Une année d'activités
 
@@ -63,10 +67,4 @@ La navigation et le camp d'été sont au cœur de l'expérience Trident. Les jeu
 
 *Soirée autour du feu de camp — été 2021*
 
-## Organisation de la troupe
-
-La troupe est composée de **patrouilles**, chacune dirigée par un **chef de patrouille** — un jeune qui a déjà une solide expérience scoute et qui accompagne les membres plus récents.
-
-La **maîtrise**, composée d'adultes bénévoles, assure la sécurité des jeunes et planifie les activités de concert avec les chefs de patrouille.
-
-**Devise :** Être prêt
+**Devise :** Soit prêt(e)
