@@ -3,7 +3,7 @@ title: "Contact"
 description: "Contactez le 188e groupe de scoutisme marin de Montréal-Nord"
 path: "contact"
 layout: contact
-order: 4
+order: 2
 draft: false
 ---
 

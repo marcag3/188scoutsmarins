@@ -24,6 +24,21 @@ const { title, description, layout } = page.data;
 ---
 
 <PageLayout title={title} description={description}>
+  {layout === 'contact' && (
+    <div
+      id="contact-success"
+      class="not-prose mb-8 hidden rounded-md border border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900"
+      role="status"
+    >
+      Merci! Votre message a été envoyé. Nous vous répondrons dès que possible.
+    </div>
+    <script is:inline>
+      if (new URLSearchParams(window.location.search).get('sent') === '1') {
+        document.getElementById('contact-success')?.classList.remove('hidden');
+      }
+    </script>
+  )}
+
   <Content />
 
   {layout === 'contact' && (
@@ -40,7 +55,7 @@ const { title, description, layout } = page.data;
 
   {layout === 'partners' && (
     <div class="not-prose mt-10">
-      <PartnerGrid partners={[...partners]} />
+      <PartnerGrid partners={partners} />
     </div>
   )}
 </PageLayout>

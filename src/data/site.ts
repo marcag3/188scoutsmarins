@@ -25,44 +25,9 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-export const navigation: NavItem[] = [
-  {
-    label: 'À propos',
-    href: '/a-propos/',
-    children: [
-      { label: 'Inscription', href: '/a-propos/inscription/' },
-      { label: 'Calendrier', href: '/a-propos/calendrier/' },
-    ],
-  },
-  {
-    label: 'Contact',
-    href: '/contact/',
-    children: [{ label: "S'impliquer", href: '/contact/simpliquer/' }],
-  },
-  {
-    label: 'Castors',
-    href: '/castor/',
-  },
-  {
-    label: 'Louveteaux/Louvettes',
-    href: '/meute/',
-  },
-  {
-    label: 'Éclaireurs / Guides',
-    href: '/troupe/',
-  },
-  {
-    label: 'Clan',
-    href: '/clan/',
-  },
-  {
-    label: 'Partenaires',
-    href: '/partenaires/',
-  },
-];
-
 export const ageGroups = [
-  { label: 'Castors', ages: '7–9 ans', emoji: '🦫' },
-  { label: 'Louveteaux', ages: '9–12 ans', emoji: '🐺' },
-  { label: 'Éclaireurs', ages: '12–17 ans', emoji: '🧭' },
+  { label: 'Castors', ages: '7–9 ans', emoji: '🦫', href: '/castor/' },
+  { label: 'Louveteaux', ages: '9–12 ans', emoji: '🐺', href: '/meute/' },
+  { label: 'Éclaireurs', ages: '12–17 ans', emoji: '🧭', href: '/troupe/' },
+  { label: 'Clan', ages: '17 ans +', emoji: '🔺', href: '/clan/' },
 ] as const;

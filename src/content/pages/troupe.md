@@ -3,7 +3,8 @@ title: "Éclaireurs / Guides (12-17 ans)"
 description: "La Branche verte du 188e scout marin — troupe marine Trident"
 path: "troupe"
 layout: default
-order: 6
+order: 5
+navLabel: Éclaireurs / Guides
 draft: false
 ---
 ![](/images/photos/la-troupe-devant-lhorizon-edited.jpg)

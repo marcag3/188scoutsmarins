@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import Button from '../components/ui/Button.astro';
+---
+
+<BaseLayout title="Page introuvable" description="Cette page n'existe pas sur le site du 188e scout marin de Montréal-Nord.">
+  <Section variant="sand" class="!py-16">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="marker-lg text-navy">404</p>
+      <h1 class="mt-4 text-2xl font-bold text-navy">Page introuvable</h1>
+      <p class="mt-4 text-navy/80">
+        La page que vous cherchez n'existe pas ou a été déplacée.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <Button href="/">Accueil</Button>
+        <Button href="/a-propos/inscription/" variant="ghost">Inscription</Button>
+        <Button href="/contact/" variant="ghost">Contact</Button>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

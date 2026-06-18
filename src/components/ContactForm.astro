@@ -7,10 +7,11 @@ interface Props {
 
 const { class: className = '' } = Astro.props;
 
-// Set formspreeId in src/content/settings/general.json (Decap CMS → Paramètres)
+const siteUrl = Astro.site?.href ?? 'https://188scoutsmarins.ca';
 const action = general.formspreeId
   ? `https://formspree.io/f/${general.formspreeId}`
   : 'https://formspree.io/f/xplaceholder';
+const redirectUrl = new URL('/contact/?sent=1', siteUrl).href;
 
 const inputClass =
   'w-full rounded-md border border-grey-light bg-white px-4 py-3 text-navy placeholder:text-grey focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20';
@@ -18,6 +19,10 @@ const labelClass = 'mb-1 block text-sm font-semibold uppercase tracking-wide tex
 ---
 
 <form action={action} method="POST" class:list={['space-y-5', className]}>
+  <input type="hidden" name="_subject" value="Message du site 188scoutsmarins.ca" />
+  <input type="hidden" name="_next" value={redirectUrl} />
+  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+
   <div>
     <label for="nom" class={labelClass}>Nom *</label>
     <input id="nom" name="nom" type="text" required class={inputClass} autocomplete="name" />

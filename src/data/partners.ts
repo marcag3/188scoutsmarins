@@ -1,9 +1,10 @@
-export const partners = [
-  { name: "Association des aventuriers de Baden-Powell", logo: "/images/photos/logo-aabp-1024.jpg", href: "https://aventuriersdebadenpowell.org/", color: true },
-  { name: "Corporation des scouts marins du grand Montréal", logo: "/images/partners/LogoSMGM_2016-228x300.jpg", href: "http://www.scoutsmarins.ca/" },
-  { name: "Jeunes marins urbains", logo: "/images/partners/JMU_Logo_RVB_Noir.webp", href: "https://www.jeunesmarinsurbains.org/" },
-  { name: "Arrondissement de Montréal-Nord", logo: "/images/partners/mtl-nord.png", href: "https://montreal.ca/montreal-nord" },
-  { name: "Église Sainte-Colette", logo: "/images/partners/ste-colette-150x150.jpg", href: "http://www.ste-colette.com/" },
-] as const;
+import partnersSettings from '../content/settings/partners.json';
 
-export type Partner = (typeof partners)[number];
+export type Partner = {
+  name: string;
+  logo?: string;
+  href?: string;
+  color?: boolean;
+};
+
+export const partners: Partner[] = partnersSettings.partners;

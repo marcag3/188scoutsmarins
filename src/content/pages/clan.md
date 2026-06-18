@@ -3,7 +3,8 @@ title: "La Branche rouge (17 ans et +)"
 description: "Clan routier marin du 188e scout marin de Montréal-Nord"
 path: "clan"
 layout: default
-order: 7
+order: 6
+navLabel: Clan
 draft: false
 ---
 ![](/images/photos/DSC02810.JPG)

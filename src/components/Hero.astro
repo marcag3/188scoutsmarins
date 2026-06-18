@@ -4,6 +4,7 @@ import InfoBox from "./ui/InfoBox.astro";
 import InsetPhoto from "./ui/InsetPhoto.astro";
 import StarburstBadge from "./ui/StarburstBadge.astro";
 import RedRule from "./ui/RedRule.astro";
+import OptimizedImg from "./ui/OptimizedImg.astro";
 
 interface Props {
   imageSrc?: string;
@@ -26,11 +27,13 @@ const {
   </div>
 
   <div class="relative min-h-[28rem] md:min-h-[34rem]">
-    <img
+    <OptimizedImg
       src={imageSrc}
       alt={imageAlt}
       class="absolute inset-0 h-full w-full object-cover"
       loading="eager"
+      fetchpriority="high"
+      sizes="100vw"
     />
     <div
       class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/25 to-navy/10"

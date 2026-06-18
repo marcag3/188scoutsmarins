@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "bookingUrl": "https://billet.188scoutsmarins.ca/",
+  "headline": "Viens ramer avec nous!",
+  "summary": "Sorties gratuites en rabaska au parc Aimé-Léonard — réserve en ligne ou sur place.",
+  "location": "Parc Aimé-Léonard",
+  "schedule": "10 h – 18 h",
+  "scheduleNote": "24 juillet : 16 h – 20 h",
+  "ctaLabel": "Réserver",
+  "image": "/images/photos/P8090031.jpg",
+  "imageAlt": "Sortie en rabaska au parc Aimé-Léonard",
+  "dates": [
+    { "label": "Dim. 28 juin", "status": "open" },
+    { "label": "Sam. 4 juil.", "status": "open" },
+    { "label": "Dim. 19 juil.", "status": "open" },
+    { "label": "Ven. 24 juil.", "status": "open" },
+    { "label": "Dim. 16 août", "status": "open" },
+    { "label": "Sam. 22 août", "status": "open" },
+    { "label": "Dim. 30 août", "status": "open" },
+    { "label": "Sam. 5 sept.", "status": "open" }
+  ]
+}

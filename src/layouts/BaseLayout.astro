@@ -7,16 +7,18 @@ import { site } from '../data/site';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = site.name,
   description = site.tagline,
+  noindex = false,
 } = Astro.props;
 
 const pageTitle = title === site.name ? title : `${title} — ${site.name}`;
 
-const siteUrl = 'https://188scoutsmarins.ca';
+const siteUrl = Astro.site?.href ?? 'https://188scoutsmarins.ca';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 const ogImage = new URL('/images/logo.jpg', siteUrl).href;
 ---
@@ -27,13 +29,16 @@ const ogImage = new URL('/images/logo.jpg', siteUrl).href;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:locale" content="fr_CA" />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content={ogImage} />
     <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

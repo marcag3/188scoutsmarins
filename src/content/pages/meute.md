@@ -3,7 +3,8 @@ title: "Louveteaux/Louvettes (9-11 ans)"
 description: "La Branche jaune du 188e scout marin — louveteaux et louvettes de 9 à 11 ans"
 path: "meute"
 layout: default
-order: 5
+order: 4
+navLabel: Louveteaux/Louvettes
 draft: false
 ---
 ![](/images/photos/logoLouvettes-1024x975.jpg)

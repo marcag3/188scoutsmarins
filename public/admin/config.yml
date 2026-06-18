@@ -23,6 +23,9 @@ collections:
       - { label: Titre, name: title, widget: string }
       - { label: Description, name: description, widget: string, required: false }
       - { label: Chemin URL, name: path, widget: string, hint: "Ex. contact ou a-propos/calendrier (sans slash initial)" }
+      - { label: Libellé menu, name: navLabel, widget: string, required: false, hint: "Texte court pour le menu (optionnel)" }
+      - { label: Menu parent, name: navParent, widget: string, required: false, hint: "Chemin du parent (ex. a-propos pour une sous-page)" }
+      - { label: Ordre, name: order, widget: number, default: 0, value_type: int }
       - label: Mise en page
         name: layout
         widget: select
@@ -54,3 +57,42 @@ collections:
               - { label: TikTok, name: tiktok, widget: string, required: false }
           - { label: URL calendrier (embed), name: calendarEmbedUrl, widget: string }
           - { label: ID Formspree, name: formspreeId, widget: string, required: false, hint: "Identifiant du formulaire Formspree (ex. xyzabcde)" }
+
+      - name: rabaska
+        label: Rabaska
+        file: src/content/settings/rabaska.json
+        fields:
+          - { label: Afficher la bannière, name: enabled, widget: boolean, default: true }
+          - { label: Titre, name: headline, widget: string }
+          - { label: Résumé, name: summary, widget: text }
+          - { label: Lieu, name: location, widget: string }
+          - { label: Horaire, name: schedule, widget: string }
+          - { label: Note horaire, name: scheduleNote, widget: string, required: false }
+          - { label: Lien de réservation, name: bookingUrl, widget: string }
+          - { label: Libellé du bouton, name: ctaLabel, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Texte alternatif image, name: imageAlt, widget: string }
+          - label: Dates
+            name: dates
+            widget: list
+            fields:
+              - { label: Date, name: label, widget: string }
+              - label: Statut
+                name: status
+                widget: select
+                options:
+                  - { label: Confirmé, value: open }
+                  - { label: Annulé, value: cancelled }
+
+      - name: partners
+        label: Partenaires
+        file: src/content/settings/partners.json
+        fields:
+          - label: Partenaires
+            name: partners
+            widget: list
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Logo, name: logo, widget: image, required: false }
+              - { label: Lien, name: href, widget: string, required: false }
+              - { label: Logo en couleur, name: color, widget: boolean, default: false, required: false }

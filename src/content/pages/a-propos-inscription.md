@@ -4,6 +4,8 @@ description: "Inscrivez votre jeune au 188e scoutisme marin de Montréal-Nord. P
 path: "a-propos/inscription"
 layout: default
 order: 0
+navParent: a-propos
+navLabel: Inscription
 draft: false
 ---
 Le scoutisme marin, c'est navigation, camps et aventure en équipe — pour les jeunes de **7 à 17 ans**.

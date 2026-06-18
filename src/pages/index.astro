@@ -9,12 +9,6 @@ import CalendarEmbed from "../components/CalendarEmbed.astro";
 import CTABanner from "../components/CTABanner.astro";
 import general from "../content/settings/general.json";
 import { ageGroups } from "../data/site";
-
-const groupLinks: Record<string, string> = {
-  Castors: "/castor/",
-  Louveteaux: "/meute/",
-  Éclaireurs: "/troupe/",
-};
 ---
 
 <BaseLayout description={general.tagline}>
@@ -35,7 +29,7 @@ const groupLinks: Record<string, string> = {
           ageGroups.map((group) => (
             <InfoBox class="min-w-[10rem]">
               <a
-                href={groupLinks[group.label]}
+                href={group.href}
                 class="block no-underline text-inherit hover:text-navy"
               >
                 <p class="label-caps">{group.label}</p>

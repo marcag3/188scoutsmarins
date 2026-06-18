@@ -2,6 +2,7 @@
 import Button from './ui/Button.astro';
 import InfoBox from './ui/InfoBox.astro';
 import RedRule from './ui/RedRule.astro';
+import OptimizedImg from './ui/OptimizedImg.astro';
 import { rabaska, rabaskaDateStatusLabels, type RabaskaDateStatus } from '../data/rabaska';
 
 if (!rabaska.enabled) {
@@ -15,11 +16,13 @@ const statusStyles: Record<RabaskaDateStatus, string> = {
 ---
 
 <aside class="relative overflow-hidden bg-sand" aria-label="Sorties en rabaska">
-  <img
+  <OptimizedImg
     src={rabaska.image}
     alt=""
     class="absolute inset-0 h-full w-full object-cover object-center md:object-right"
     loading="eager"
+    fetchpriority="high"
+    sizes="100vw"
     aria-hidden="true"
   />
   <div

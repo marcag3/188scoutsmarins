@@ -25,19 +25,9 @@ Certaines pages utilisent un modèle particulier (champ *Mise en page*) :
 | `default` | Texte seulement |
 | `contact` | Formulaire de contact en bas de page |
 | `calendar` | Calendrier Google intégré |
-| `photos` | Grille des albums |
 | `partners` | Grille des logos partenaires |
 
 Le champ **Chemin URL** (`path`) doit correspondre à l'adresse du site (ex. `a-propos/inscription`). Ne le changez pas sans raison.
-
-## Ajouter des photos à un album
-
-1. **Albums photos** → sélectionnez ou créez un album.
-2. **Couverture** : image principale de la carte.
-3. **Images** : ajoutez chaque photo (téléversement vers `public/images/photos`).
-4. Publiez.
-
-Les albums apparaissent sur la page [Photos](/a-propos/photos/) et sur l'accueil (les 3 plus récents).
 
 ## Paramètres généraux
 
@@ -53,6 +43,18 @@ Les albums apparaissent sur la page [Photos](/a-propos/photos/) et sur l'accueil
 1. Créez un formulaire gratuit sur [formspree.io](https://formspree.io) avec le courriel `188scoutmarin@gmail.com`.
 2. Copiez l'identifiant (partie après `/f/` dans l'URL).
 3. Collez-le dans **ID Formspree** dans les paramètres.
+
+## Sorties en rabaska
+
+**Paramètres → Rabaska** permet de gérer la bannière saisonnière sur l'accueil :
+
+- Activer ou désactiver la bannière
+- Dates, statut (confirmé / annulé), horaire, lieu
+- Lien de réservation et image
+
+## Partenaires
+
+**Paramètres → Partenaires** permet d'ajouter, modifier ou retirer les logos affichés sur la page [Partenaires](/partenaires/).
 
 ## Brouillons
 

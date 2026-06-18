@@ -1,6 +1,12 @@
 ---
 import { site } from "../data/site";
 import Nav from "./Nav.astro";
+import { getCollection } from "astro:content";
+import { buildNavigation } from "../lib/navigation";
+import OptimizedImg from "./ui/OptimizedImg.astro";
+
+const pages = await getCollection("pages", ({ data }) => !data.draft);
+const navigation = buildNavigation(pages);
 ---
 
 <header class="sticky top-0 z-40 bg-navy shadow-md">
@@ -8,12 +14,14 @@ import Nav from "./Nav.astro";
     class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
   >
     <a href="/" class="flex items-center gap-3">
-      <img
+      <OptimizedImg
         src="/images/logo.jpg"
         alt={`Logo ${site.name}`}
         class="h-12 w-12 rounded-full border-2 border-white object-cover"
-        width="48"
-        height="48"
+        width={48}
+        height={48}
+        loading="eager"
+        fetchpriority="high"
       />
       <div class="hidden sm:block">
         <p
@@ -24,6 +32,6 @@ import Nav from "./Nav.astro";
         <p class="text-xs text-white/70">{site.subtext}</p>
       </div>
     </a>
-    <Nav />
+    <Nav navigation={navigation} />
   </div>
 </header>

@@ -1,6 +1,7 @@
 ---
 import { site } from '../data/site';
 import RedRule from './ui/RedRule.astro';
+import OptimizedImg from './ui/OptimizedImg.astro';
 
 const socialLinks = [
   { label: 'Facebook', href: site.social.facebook },
@@ -16,12 +17,13 @@ const socialLinks = [
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
         <div class="text-center sm:col-span-2 sm:text-left lg:col-span-1">
           <a href="/" class="inline-flex items-center gap-4">
-            <img
+            <OptimizedImg
               src="/images/logo.jpg"
               alt={`Logo ${site.name}`}
               class="h-16 w-16 shrink-0 rounded-full border-2 border-white object-cover"
-              width="64"
-              height="64"
+              width={64}
+              height={64}
+              loading="lazy"
             />
             <div class="text-left">
               <p class="font-[family-name:var(--font-marker)] text-xl leading-tight text-white">
@@ -68,12 +70,12 @@ const socialLinks = [
           rel="noopener noreferrer"
           class="group flex flex-col items-center gap-2 sm:flex-row sm:justify-center lg:justify-start"
         >
-          <img
+          <OptimizedImg
             src={site.affiliationLogo}
             alt={site.affiliationName}
             class="h-10 w-10 shrink-0 rounded bg-white p-0.5 object-contain"
-            width="40"
-            height="40"
+            width={40}
+            height={40}
             loading="lazy"
           />
           <span class="max-w-sm text-center text-sm text-white/80 group-hover:text-white sm:max-w-none sm:text-left">

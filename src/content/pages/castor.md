@@ -3,7 +3,8 @@ title: "Castors (7-9 ans)"
 description: "Colonie castor — la branche des plus jeunes du 188e scout marin"
 path: "castor"
 layout: default
-order: 4
+order: 3
+navLabel: Castors
 draft: false
 ---
 ![](/images/photos/castors-camp.jpg)

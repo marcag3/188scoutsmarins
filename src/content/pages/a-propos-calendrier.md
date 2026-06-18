@@ -4,6 +4,7 @@ description: "Nous avons des agendas publics pour chaque unité ou nous écrivon
 path: "a-propos/calendrier"
 layout: calendar
 order: 3
+navParent: a-propos
 draft: false
 ---
 Nous avons des agendas publics pour chaque unité ou nous écrivons les activités à venir. Pour voir les évènements dans votre propre agenda, vous pouvez vous abonner.
