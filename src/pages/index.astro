@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import RabaskaBanner from "../components/RabaskaBanner.astro";
 import Section from "../components/ui/Section.astro";
 import InfoBox from "../components/ui/InfoBox.astro";
 import RedRule from "../components/ui/RedRule.astro";
@@ -17,6 +18,7 @@ const groupLinks: Record<string, string> = {
 ---
 
 <BaseLayout description={general.tagline}>
+  <RabaskaBanner />
   <Hero />
 
   <Section variant="light">

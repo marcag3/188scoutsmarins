@@ -1,0 +1,93 @@
+---
+import Button from './ui/Button.astro';
+import InfoBox from './ui/InfoBox.astro';
+import RedRule from './ui/RedRule.astro';
+import { rabaska, rabaskaDateStatusLabels, type RabaskaDateStatus } from '../data/rabaska';
+
+if (!rabaska.enabled) {
+  return null;
+}
+
+const statusStyles: Record<RabaskaDateStatus, string> = {
+  open: 'bg-emerald-100 text-emerald-800',
+  cancelled: 'bg-red/15 text-red',
+};
+---
+
+<aside class="relative overflow-hidden bg-sand" aria-label="Sorties en rabaska">
+  <img
+    src={rabaska.image}
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-center md:object-right"
+    loading="eager"
+    aria-hidden="true"
+  />
+  <div
+    class="absolute inset-0 bg-gradient-to-r from-sand from-50% via-sand/95 to-sand/50 md:from-45% md:via-sand/90 md:to-transparent"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-4 py-5 md:px-6 md:py-6">
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div class="max-w-2xl">
+        <h2 class="marker-md text-navy">{rabaska.headline}</h2>
+        <p class="mt-1.5 text-sm leading-relaxed text-navy/80 md:text-base">
+          {rabaska.summary}
+        </p>
+      </div>
+      <Button
+        href={rabaska.bookingUrl}
+        variant="primary"
+        size="md"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full shrink-0 sm:w-auto"
+      >
+        {rabaska.ctaLabel}
+      </Button>
+    </div>
+
+    <div class="mt-4 space-y-3">
+      <InfoBox class="text-left !px-4 !py-3">
+        <p class="label-caps">Dates</p>
+        <ul class="mt-2 grid gap-x-6 gap-y-1 sm:grid-cols-2 lg:grid-cols-4">
+          {rabaska.dates.map((date) => (
+            <li class="flex items-center justify-between gap-3">
+              <span
+                class:list={[
+                  'text-sm font-semibold',
+                  date.status === 'cancelled' && 'text-navy/50 line-through',
+                ]}
+              >
+                {date.label}
+              </span>
+              <span
+                class:list={[
+                  'shrink-0 rounded px-1.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide',
+                  statusStyles[date.status],
+                ]}
+              >
+                {rabaskaDateStatusLabels[date.status]}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </InfoBox>
+
+      <div class="grid gap-3 sm:grid-cols-2 sm:max-w-xl">
+        <InfoBox class="text-left !px-4 !py-3">
+          <p class="label-caps">Horaire</p>
+          <p class="mt-1.5 font-bold">{rabaska.schedule}</p>
+          <p class="mt-0.5 text-sm text-navy/70">{rabaska.scheduleNote}</p>
+        </InfoBox>
+
+        <InfoBox class="text-left !px-4 !py-3">
+          <p class="label-caps">Lieu</p>
+          <p class="mt-1.5 font-bold">{rabaska.location}</p>
+        </InfoBox>
+      </div>
+    </div>
+  </div>
+  <RedRule />
+</aside>
