@@ -24,7 +24,7 @@ PARTNERS_FILE = ROOT / "src/data/partners.ts"
 TARGET_SLUGS = {
     "a-propos",
     "a-propos/calendrier",
-    "a-propos/inscription-2",
+    "a-propos/inscription",
     "a-propos/photos",
     "contact",
     "contact/simpliquer",

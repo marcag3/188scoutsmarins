@@ -28,7 +28,7 @@ Certaines pages utilisent un modèle particulier (champ *Mise en page*) :
 | `photos` | Grille des albums |
 | `partners` | Grille des logos partenaires |
 
-Le champ **Chemin URL** (`path`) doit correspondre à l'adresse du site (ex. `a-propos/inscription-2`). Ne le changez pas sans raison.
+Le champ **Chemin URL** (`path`) doit correspondre à l'adresse du site (ex. `a-propos/inscription`). Ne le changez pas sans raison.
 
 ## Ajouter des photos à un album
 

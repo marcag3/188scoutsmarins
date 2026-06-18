@@ -28,7 +28,7 @@ export const navigation: NavItem[] = [
     label: 'À propos',
     href: '/a-propos/',
     children: [
-      { label: 'Inscription', href: '/a-propos/inscription-2/' },
+      { label: 'Inscription', href: '/a-propos/inscription/' },
       { label: 'Calendrier', href: '/a-propos/calendrier/' },
     ],
   },

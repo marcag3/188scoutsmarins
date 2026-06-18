@@ -7,7 +7,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    path: z.string().optional(), // URL path e.g. a-propos/inscription-2 (alias: slug in legacy frontmatter)
+    path: z.string().optional(), // URL path e.g. a-propos/inscription (alias: slug in legacy frontmatter)
     navLabel: z.string().optional(),
     navParent: z.string().optional(),
     order: z.number().default(0),
