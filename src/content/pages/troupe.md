@@ -31,9 +31,9 @@ Tout au long de la saison, la troupe alterne formations, camps et grands jeux. V
 - Réunions de patrouille
 - Initiation à la plongée sous-marine
 
-![](/images/photos/20240812_111542.jpg)
+![](/images/photos/IMG_2020.JPG)
 
-*Construction d'une tour de pioneériat — grands jeux techniques*
+*Fleur en main, foulard au coup, sac au dos*
 
 ![](/images/photos/IMG_20210821_151746-scaled.jpg)
 

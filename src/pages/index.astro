@@ -1,18 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
-import Section from '../components/ui/Section.astro';
-import InfoBox from '../components/ui/InfoBox.astro';
-import RedRule from '../components/ui/RedRule.astro';
-import CalendarEmbed from '../components/CalendarEmbed.astro';
-import CTABanner from '../components/CTABanner.astro';
-import general from '../content/settings/general.json';
-import { ageGroups } from '../data/site';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/ui/Section.astro";
+import InfoBox from "../components/ui/InfoBox.astro";
+import RedRule from "../components/ui/RedRule.astro";
+import CalendarEmbed from "../components/CalendarEmbed.astro";
+import CTABanner from "../components/CTABanner.astro";
+import general from "../content/settings/general.json";
+import { ageGroups } from "../data/site";
 
 const groupLinks: Record<string, string> = {
-  Castors: '/castor/',
-  Louveteaux: '/meute/',
-  Éclaireurs: '/troupe/',
+  Castors: "/castor/",
+  Louveteaux: "/meute/",
+  Éclaireurs: "/troupe/",
 };
 ---
 
@@ -24,19 +24,24 @@ const groupLinks: Record<string, string> = {
       <h2 class="marker-lg text-navy">Notre mission</h2>
       <RedRule class="mx-auto max-w-xs" />
       <p class="prose-scout mx-auto">
-        Ceux qui souhaitent rencontrer des gens, créer des liens, réaliser des projets
-        positifs, développer leur autonomie ou simplement avoir du plaisir en équipe, se
-        retrouvent dans notre scoutisme marin.
+        Ceux qui souhaitent rencontrer des gens, créer des liens, réaliser des
+        projets positifs, développer leur autonomie ou simplement avoir du
+        plaisir en équipe, se retrouvent dans notre scoutisme marin.
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
-        {ageGroups.map((group) => (
-          <InfoBox class="min-w-[10rem]">
-            <a href={groupLinks[group.label]} class="block no-underline text-inherit hover:text-navy">
-              <p class="label-caps">{group.label}</p>
-              <p class="mt-1 font-bold">{group.ages}</p>
-            </a>
-          </InfoBox>
-        ))}
+        {
+          ageGroups.map((group) => (
+            <InfoBox class="min-w-[10rem]">
+              <a
+                href={groupLinks[group.label]}
+                class="block no-underline text-inherit hover:text-navy"
+              >
+                <p class="label-caps">{group.label}</p>
+                <p class="mt-1 font-bold">{group.ages}</p>
+              </a>
+            </InfoBox>
+          ))
+        }
       </div>
     </div>
   </Section>
