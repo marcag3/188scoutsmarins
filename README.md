@@ -1,5 +1,7 @@
 # 188e Montréal-Nord — scoutisme marin
 
+[![CI](https://github.com/marcag3/188scoutsmarins/actions/workflows/ci.yml/badge.svg)](https://github.com/marcag3/188scoutsmarins/actions/workflows/ci.yml)
+
 Site web du [188e groupe scout marin de Montréal-Nord](https://188scoutsmarins.ca), construit avec [Astro](https://astro.build), [Tailwind CSS](https://tailwindcss.com) et [Decap CMS](https://decapcms.org). Hébergé sur Cloudflare Pages.
 
 ## Structure
