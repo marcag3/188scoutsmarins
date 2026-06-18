@@ -6,7 +6,7 @@ layout: default
 order: 5
 draft: false
 ---
-![](/images/uploads/2023/11/logoLouvettes-1024x975.jpg)
+![](/images/photos/logoLouvettes-1024x975.jpg)
 
 Le nom qui représente les louveteaux/louvettes est  la "meute". L'untité est composée des louveteaux (Loups Marins) et des louvettes (Sirènes). La méthodologie est basée sur le Livre de la jungle de Rudyard Kipling. Les jeunes sont des loups, qui suivent les traces de Mowgli. L'apprentissage se fait principalement par le jeu. Pour ce qui est du marin, nous apprenons aux jeunes certaines informations de base. Voici un aperçu de ce que nous apprenons au cours d'une année :
 
@@ -21,4 +21,4 @@ Le nom qui représente les louveteaux/louvettes est  la "meute". L'untité est c
 
 Nous apprenons également aux jeunes la devise, les maximes et le maître mot. Ce sont les codes de vie de l'unité, avec lesquels nous encadrons les activités et la méthodologie.
 
-![](/images/uploads/2023/11/img_1_1700537768533-1024x768.webp)
+![](/images/photos/img_1_1700537768533-1024x768.webp)

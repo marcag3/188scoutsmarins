@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_XML = ROOT / "188egroupedescoutismemarinmontral-nord.WordPress.2026-06-16.xml"
 PAGES_DIR = ROOT / "src/content/pages"
 ALBUMS_DIR = ROOT / "src/content/albums"
-UPLOADS_DIR = ROOT / "public/images/uploads"
+PHOTOS_DIR = ROOT / "public/images/photos"
+PARTNERS_DIR = ROOT / "public/images/partners"
 DOCUMENTS_DIR = ROOT / "public/documents"
 PARTNERS_FILE = ROOT / "src/data/partners.ts"
 
@@ -154,8 +155,10 @@ class AssetDownloader:
         match = WP_UPLOAD_RE.search(url)
         if not match:
             return None
-        rel = match.group(1).rstrip("/")
-        return f"/images/uploads/{rel}"
+        filename = Path(match.group(1).rstrip("/")).name
+        if filename.startswith(("LogoSMGM", "JMU_Logo", "Logo_Montreal-Nord", "ste-colette")):
+            return f"/images/partners/{filename}"
+        return f"/images/photos/{filename}"
 
     def download_upload(self, url: str) -> str | None:
         local = self.local_upload_path(url)
@@ -163,8 +166,8 @@ class AssetDownloader:
             return url
         if local in self._cache:
             return self._cache[local]
-        rel = local.removeprefix("/images/uploads/")
-        dest = UPLOADS_DIR / rel
+        dest_dir = PARTNERS_DIR if "/images/partners/" in local else PHOTOS_DIR
+        dest = dest_dir / Path(local).name
         if dest.exists():
             self._cache[local] = local
             return local
@@ -209,9 +212,15 @@ class AssetDownloader:
 
 
 def rewrite_upload_urls(text: str) -> str:
+    def replacer(match: re.Match[str]) -> str:
+        filename = Path(match.group(1).rstrip("/")).name
+        if filename.startswith(("LogoSMGM", "JMU_Logo", "Logo_Montreal-Nord", "ste-colette")):
+            return f"/images/partners/{filename}"
+        return f"/images/photos/{filename}"
+
     return re.sub(
         r"https?://(?:www\.)?188scoutsmarins\.ca/wp-content/uploads/([^\s\"'<>]+)",
-        r"/images/uploads/\1",
+        replacer,
         text,
         flags=re.IGNORECASE,
     )

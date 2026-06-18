@@ -12,7 +12,7 @@ Prenez contact avec nous et venez nous voir pour essayer gratuitement
 
 ### Document d'inscription
 
-![](/images/uploads/2022/03/PXL_20210818_150104120-300x225.jpg)
+![](/images/photos/PXL_20210818_150104120-scaled.jpg)
 
 *Éclaireurs repérant les prochaines bouées*
 
@@ -24,7 +24,7 @@ Pour rester au courant des nos prochaines activités, inscrivez vous à une list
 
 ### Combien ça coûte les scouts marins?
 
-![](/images/uploads/2022/04/DSCN7131-300x225.jpg)
+![](/images/photos/DSCN7131-300x225.jpg)
 
 *Éclaireurs faisant de la voile*
 
@@ -40,7 +40,7 @@ Nous visons à rendre nos activités accessibles à tous. Nos chefs sont des bé
 
 *estimation des coûts pour une année*
 
-![](/images/uploads/2022/04/IMG_6677-300x200.jpg)
+![](/images/photos/IMG_6677-300x200.jpg)
 
 *Éclaireurs de retour d'expédition*
 

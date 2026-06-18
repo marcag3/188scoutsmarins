@@ -1,10 +1,12 @@
 ---
-import { site } from '../data/site';
-import Nav from './Nav.astro';
+import { site } from "../data/site";
+import Nav from "./Nav.astro";
 ---
 
 <header class="sticky top-0 z-40 bg-navy shadow-md">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6"
+  >
     <a href="/" class="flex items-center gap-3">
       <img
         src="/images/logo.jpg"
@@ -14,10 +16,12 @@ import Nav from './Nav.astro';
         height="48"
       />
       <div class="hidden sm:block">
-        <p class="font-[family-name:var(--font-marker)] text-lg leading-tight text-white">
-          188e scout marin
+        <p
+          class="font-[family-name:var(--font-marker)] text-lg leading-tight text-white"
+        >
+          {site.name}
         </p>
-        <p class="text-xs text-white/70">{site.location}</p>
+        <p class="text-xs text-white/70">{site.subtext}</p>
       </div>
     </a>
     <Nav />

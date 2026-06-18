@@ -24,4 +24,4 @@ Sélectionnez le calendrier auquel ajouter les événements, puis cliquez sur OK
 
 **Groupe**: https://calendar.google.com/calendar/ical/188scoutmarin%40gmail.com/public/basic.ics
 
-![](/images/uploads/2022/09/IMG_2448-1024x683.jpg)
+![](/images/photos/IMG_2448-1024x683.jpg)

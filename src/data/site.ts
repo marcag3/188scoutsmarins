@@ -1,7 +1,8 @@
 import general from '../content/settings/general.json';
 
 export const site = {
-  name: '188e groupe de scoutisme marin',
+  name: '188e Montréal-Nord',
+  subtext: 'scoutisme marin',
   location: 'Montréal-Nord',
   tagline: general.tagline,
   meetingInfo: general.meetingInfo,

@@ -34,7 +34,7 @@ Le champ **Chemin URL** (`path`) doit correspondre à l'adresse du site (ex. `a-
 
 1. **Albums photos** → sélectionnez ou créez un album.
 2. **Couverture** : image principale de la carte.
-3. **Images** : ajoutez chaque photo (téléversement vers `public/images/uploads`).
+3. **Images** : ajoutez chaque photo (téléversement vers `public/images/photos`).
 4. Publiez.
 
 Les albums apparaissent sur la page [Photos](/a-propos/photos/) et sur l'accueil (les 3 plus récents).

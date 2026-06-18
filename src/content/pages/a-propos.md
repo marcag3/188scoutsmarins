@@ -8,7 +8,7 @@ draft: false
 ---
 ## Notre mission
 
-![](/images/uploads/2022/03/DSCN5295-300x225.jpg)
+![](/images/photos/DSCN5295-300x225.jpg)
 
 Nous offrons une chance unique aux jeunes de vivre des activités hors du commun, à la hauteur de leurs ambitions.
 
@@ -20,7 +20,7 @@ Le scoutisme a comme mission l’éducation dynamique des garçons et des filles
 
 ## C'est quoi le scoutisme marin?
 
-![](/images/uploads/2022/03/PXL_20211002_180727334.MP_-300x225.jpg)
+![](/images/photos/PXL_20211002_180727334.MP_-300x225.jpg)
 
 Le scoutisme (de l'anglais scout, lui même issu du vieux français « escoute » signifiant éclaireur) est un mouvement de jeunesse mondial créé par Lord Robert Baden-Powell, un général britannique à la retraite, en 1907, à Brownsea. Aujourd'hui, le scoutisme et le guidisme comptent plus de 38 millions de membres dans 217 pays et territoires, de toutes les religions et de toutes les nationalités, représentés par plusieurs associations scoutes au niveau mondial.
 
@@ -28,7 +28,7 @@ Le scoutisme est un mouvement de jeunesse reposant sur l'apprentissage de valeur
 
 ## Avantages du scoutisme
 
-![](/images/uploads/2022/03/IMG_20171028_161309-edited-300x225.jpg)
+![](/images/photos/IMG_20171028_161309-edited-300x225.jpg)
 
 Le scoutisme, contrairement aux mouvements de loisir, est un mouvement d’éducation. Il tend donc, par le jeu, l’équipe et la nature à former les jeunes qui y adhèrent, à une vie sociétale utile, active et à un rôle de premier plan dans son milieu.
 
@@ -36,7 +36,7 @@ Le scoutisme, contrairement aux mouvements de loisir, est un mouvement d’éduc
 
 Les 4 buts originaux sont vraiment structurés et approfondis par Baden-Powell dans Le Guide du chef éclaireur, dont ils forment le sommaire. Les buts du scoutisme visent essentiellement au développement complet de l’individu. Ils s’expriment ainsi :
 
-![](/images/uploads/2022/03/PXL_20211104_023850732-300x225.jpg)
+![](/images/photos/PXL_20211104_023850732-300x225.jpg)
 
 - **Formation du caractère : **La loi scoute ou guide – la vie au grand air – campements, chevalerie, bonheur, joie de vivre, observation, jeux d’éclaireurs, art du marin.
 - **Santé et développement physique :** Exercices physiques et le pourquoi de chacun d’eux, habitudes d’hygiène, jeux, prévention des maladies, tempérance, tabac, maîtrise de soi.

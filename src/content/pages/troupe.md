@@ -21,15 +21,15 @@ La troupe Marine Trident à été fondé en 2005 à Montréal-Nord. La troupe re
 - Réunions de patrouille
 - Initiation à la plongée sous-marine
 
-![](/images/uploads/2022/03/IMG_20210824_095947-1024x768.jpg)
+![](/images/photos/IMG_20210824_095947-1024x768.jpg)
 
 *Installation du camp d'été 2021*
 
-![](/images/uploads/2022/03/IMG_20210824_142342-1024x768.jpg)
+![](/images/photos/la-troupe-devant-lhorizon-edited.jpg)
 
 *Atalante 2 devant le port de sorel à l'été 2021*
 
-![](/images/uploads/2022/03/IMG_20210821_183038-1024x769.jpg)
+![](/images/photos/IMG_20210821_183038-1-scaled.jpg)
 
 *Coucher de soleil à bord d'Atalante 2 à l'été 2021*
 
