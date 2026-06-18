@@ -41,7 +41,8 @@ collections:
         file: src/content/settings/general.json
         fields:
           - { label: Slogan, name: tagline, widget: string }
-          - { label: Réunion (texte), name: meetingInfo, widget: string }
+          - { label: Horaire des réunions, name: meetingSchedule, widget: string, hint: "Ex. vendredis soir, 19h – 21h" }
+          - { label: Lieu des réunions, name: meetingLocation, widget: string, hint: "Ex. pavillon du parc Henri-Bourassa" }
           - label: Réseaux sociaux
             name: social
             widget: object

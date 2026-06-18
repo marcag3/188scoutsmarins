@@ -5,48 +5,44 @@ import Section from '../components/ui/Section.astro';
 import InfoBox from '../components/ui/InfoBox.astro';
 import RedRule from '../components/ui/RedRule.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
+import CTABanner from '../components/CTABanner.astro';
 import general from '../content/settings/general.json';
-import { site } from '../data/site';
+import { site, ageGroups } from '../data/site';
+
+const featuredGroups = ageGroups.filter((g) => g.label !== 'Castors');
 ---
 
 <BaseLayout description={general.tagline}>
   <Hero />
 
   <Section variant="light">
-    <div class="mx-auto max-w-3xl space-y-6">
-      <h2 class="marker-lg text-center text-navy">Notre mission</h2>
-      <RedRule class="max-w-xs mx-auto" />
-      <div class="prose-scout text-center">
-        <p>
-          Ceux qui souhaitent rencontrer des gens, créer des liens, réaliser des projets
-          positifs, développer leur autonomie ou simplement avoir du plaisir en équipe, se
-          retrouvent dans notre scoutisme marin.
-        </p>
-      </div>
-      <div class="flex justify-center gap-4 pt-4">
-        <InfoBox class="max-w-xs">
-          <p class="label-caps">Louveteaux</p>
-          <p class="mt-1 font-bold">9 – 11 ans</p>
-        </InfoBox>
-        <InfoBox class="max-w-xs">
-          <p class="label-caps">Éclaireurs</p>
-          <p class="mt-1 font-bold">12 – 17 ans</p>
-        </InfoBox>
+    <div class="mx-auto max-w-3xl space-y-6 text-center">
+      <h2 class="marker-lg text-navy">Notre mission</h2>
+      <RedRule class="mx-auto max-w-xs" />
+      <p class="prose-scout mx-auto">
+        Ceux qui souhaitent rencontrer des gens, créer des liens, réaliser des projets
+        positifs, développer leur autonomie ou simplement avoir du plaisir en équipe, se
+        retrouvent dans notre scoutisme marin.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        {featuredGroups.map((group) => (
+          <InfoBox class="min-w-[10rem]">
+            <p class="label-caps">{group.label}</p>
+            <p class="mt-1 font-bold">{group.ages}</p>
+          </InfoBox>
+        ))}
       </div>
     </div>
   </Section>
-
-  <RedRule />
 
   <Section variant="sand">
     <h2 class="marker-lg mb-6 text-center text-navy">Prochaines activités</h2>
     <CalendarEmbed src={general.calendarEmbedUrl} />
   </Section>
 
-  <div class="bg-navy py-6 text-center">
-    <a href="/a-propos/inscription-2/" class="info-box inline-block min-w-64 transition hover:bg-sand">
-      <p class="text-lg font-bold uppercase tracking-wide text-navy">Inscriptions en cours</p>
-    </a>
-    <p class="mt-4 text-sm text-white/80">{site.meetingInfo}</p>
-  </div>
+  <CTABanner
+    title="Inscriptions en cours"
+    text="Rejoins la troupe pour une saison d'aventures nautiques et scoutistes."
+    buttonLabel="S'inscrire"
+  />
 </BaseLayout>

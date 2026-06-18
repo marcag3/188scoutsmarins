@@ -1,11 +1,17 @@
 import general from '../content/settings/general.json';
 
+function sentenceCase(text: string): string {
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
 export const site = {
   name: '188e Montréal-Nord',
   subtext: 'scoutisme marin',
   location: 'Montréal-Nord',
   tagline: general.tagline,
-  meetingInfo: general.meetingInfo,
+  meetingSchedule: general.meetingSchedule,
+  meetingLocation: general.meetingLocation,
+  meetingInfo: `Réunions les ${sentenceCase(general.meetingSchedule)} au ${sentenceCase(general.meetingLocation)}`,
   email: '188scoutmarin@gmail.com',
   social: general.social,
   affiliation: "Membre de l'association des aventuriers de Baden-Powell",
