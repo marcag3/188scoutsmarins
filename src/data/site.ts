@@ -38,6 +38,10 @@ export const navigation: NavItem[] = [
     children: [{ label: "S'impliquer", href: '/contact/simpliquer/' }],
   },
   {
+    label: 'Castors',
+    href: '/castor/',
+  },
+  {
     label: 'Louveteaux/Louvettes',
     href: '/meute/',
   },

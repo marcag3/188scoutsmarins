@@ -54,7 +54,7 @@ Nos chefs sont bénévoles : leur temps est offert. Il reste toutefois des frais
 
 **Total estimé (première année) : environ 690 $** — dont 100 $ d'uniforme, payable une seule fois.
 
-Les frais pour les **Louveteaux** (9–12 ans) et la **Meute** (7–9 ans) sont semblables, mais certains camps sont réservés à la troupe (12 ans et plus).
+Les frais pour les **Castors** (7–9 ans) et les **Louveteaux** (9–12 ans) sont semblables, mais certains camps sont réservés à la troupe (12 ans et plus).
 
 ![](/images/photos/IMG_6677-300x200.jpg)
 

@@ -9,7 +9,11 @@ import CTABanner from '../components/CTABanner.astro';
 import general from '../content/settings/general.json';
 import { site, ageGroups } from '../data/site';
 
-const featuredGroups = ageGroups.filter((g) => g.label !== 'Castors');
+const groupLinks: Record<string, string> = {
+  Castors: '/castor/',
+  Louveteaux: '/meute/',
+  Éclaireurs: '/troupe/',
+};
 ---
 
 <BaseLayout description={general.tagline}>
@@ -25,10 +29,12 @@ const featuredGroups = ageGroups.filter((g) => g.label !== 'Castors');
         retrouvent dans notre scoutisme marin.
       </p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
-        {featuredGroups.map((group) => (
+        {ageGroups.map((group) => (
           <InfoBox class="min-w-[10rem]">
-            <p class="label-caps">{group.label}</p>
-            <p class="mt-1 font-bold">{group.ages}</p>
+            <a href={groupLinks[group.label]} class="block no-underline text-inherit hover:text-navy">
+              <p class="label-caps">{group.label}</p>
+              <p class="mt-1 font-bold">{group.ages}</p>
+            </a>
           </InfoBox>
         ))}
       </div>
