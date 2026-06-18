@@ -9,11 +9,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://188scoutsmarins.ca',
 
-  redirects: {
-    '/a-propos/inscription-2': '/a-propos/inscription',
-    '/a-propos/inscription-2/': '/a-propos/inscription/',
-  },
-
   vite: {
     plugins: [tailwindcss()]
   },

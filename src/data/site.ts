@@ -49,6 +49,10 @@ export const navigation: NavItem[] = [
     href: '/troupe/',
   },
   {
+    label: 'Clan',
+    href: '/clan/',
+  },
+  {
     label: 'Partenaires',
     href: '/partenaires/',
   },

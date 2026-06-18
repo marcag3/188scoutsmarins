@@ -1,9 +1,9 @@
 ---
-import { site } from '../data/site';
-import InfoBox from './ui/InfoBox.astro';
-import InsetPhoto from './ui/InsetPhoto.astro';
-import StarburstBadge from './ui/StarburstBadge.astro';
-import RedRule from './ui/RedRule.astro';
+import { site } from "../data/site";
+import InfoBox from "./ui/InfoBox.astro";
+import InsetPhoto from "./ui/InsetPhoto.astro";
+import StarburstBadge from "./ui/StarburstBadge.astro";
+import RedRule from "./ui/RedRule.astro";
 
 interface Props {
   imageSrc?: string;
@@ -13,10 +13,10 @@ interface Props {
 }
 
 const {
-  imageSrc = '/images/photos/la-troupe-devant-lhorizon-edited.jpg',
-  imageAlt = 'La troupe devant l\'horizon',
-  headline = 'Viens vivre des aventures avec NOUS!',
-  insetSrc = '/images/photos/scout-marin10.jpg',
+  imageSrc = "/images/photos/la-troupe-devant-lhorizon-edited.jpg",
+  imageAlt = "La troupe devant l'horizon",
+  headline = "Viens vivre des aventures avec NOUS!",
+  insetSrc = "/images/photos/scout-marin10.jpg",
 } = Astro.props;
 ---
 
@@ -35,13 +35,16 @@ const {
     <div
       class="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/25 to-navy/10"
       aria-hidden="true"
-    />
+    >
+    </div>
 
-    <div class="relative flex min-h-[28rem] flex-col justify-end gap-6 p-4 md:min-h-[34rem] md:flex-row md:items-end md:justify-between md:p-8">
+    <div
+      class="relative flex min-h-[28rem] flex-col justify-end gap-6 p-4 md:min-h-[34rem] md:flex-row md:items-end md:justify-between md:p-8"
+    >
       <div class="flex items-end gap-3">
         <InsetPhoto src={insetSrc} alt="Activité scout" />
         <div class="mb-2 flex flex-col gap-2">
-          <StarburstBadge label="9 ans+" />
+          <StarburstBadge label="7 ans+" />
           <StarburstBadge label="Marin" />
         </div>
       </div>
@@ -56,8 +59,13 @@ const {
           <p class="mt-1 text-lg font-bold">{site.meetingSchedule}</p>
           <p class="mt-1 text-base font-semibold">{site.meetingLocation}</p>
         </InfoBox>
-        <a href="/a-propos/inscription/" class="info-box block bg-red text-white transition hover:bg-red-dark">
-          <p class="text-lg font-bold uppercase tracking-wide">Inscris-toi ici</p>
+        <a
+          href="/a-propos/inscription/"
+          class="info-box block bg-red text-white transition hover:bg-red-dark"
+        >
+          <p class="text-lg font-bold uppercase tracking-wide">
+            Inscris-toi ici
+          </p>
         </a>
       </div>
     </div>
