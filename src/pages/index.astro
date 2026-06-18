@@ -6,31 +6,23 @@ import InfoBox from '../components/ui/InfoBox.astro';
 import RedRule from '../components/ui/RedRule.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
 import PhotoGrid from '../components/PhotoGrid.astro';
+import { getCollection } from 'astro:content';
+import general from '../content/settings/general.json';
 import { site } from '../data/site';
 
-const placeholderAlbums = [
-  {
-    title: "Camp d'été",
-    year: 2021,
-    cover: '/images/photos/scout-marin10.jpg',
-    href: '/a-propos/photos/',
-  },
-  {
-    title: 'Base nautique',
-    year: 2024,
-    cover: '/images/photos/20240812_111542.jpg',
-    href: '/a-propos/photos/',
-  },
-  {
-    title: 'Sortie voile',
-    year: 2024,
-    cover: '/images/photos/IMG_2020.JPG',
-    href: '/a-propos/photos/',
-  },
-];
+const albums = await getCollection('albums');
+const recentAlbums = [...albums]
+  .sort((a, b) => b.data.year - a.data.year)
+  .slice(0, 3)
+  .map((album) => ({
+    title: album.data.title,
+    year: album.data.year,
+    cover: album.data.cover,
+    href: `/albums/${album.id}/`,
+  }));
 ---
 
-<BaseLayout>
+<BaseLayout description={general.tagline}>
   <Hero />
 
   <Section variant="light">
@@ -61,14 +53,14 @@ const placeholderAlbums = [
 
   <Section variant="sand">
     <h2 class="marker-lg mb-6 text-center text-navy">Prochaines activités</h2>
-    <CalendarEmbed />
+    <CalendarEmbed src={general.calendarEmbedUrl} />
   </Section>
 
   <RedRule />
 
   <Section variant="light">
     <h2 class="marker-lg mb-8 text-center text-navy">Photos</h2>
-    <PhotoGrid albums={placeholderAlbums} />
+    <PhotoGrid albums={recentAlbums} />
   </Section>
 
   <div class="bg-navy py-6 text-center">

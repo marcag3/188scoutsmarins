@@ -1,10 +1,16 @@
 ---
+import general from '../content/settings/general.json';
+
 interface Props {
-  action?: string;
   class?: string;
 }
 
-const { action = 'https://formspree.io/f/placeholder', class: className = '' } = Astro.props;
+const { class: className = '' } = Astro.props;
+
+// Set formspreeId in src/content/settings/general.json (Decap CMS → Paramètres)
+const action = general.formspreeId
+  ? `https://formspree.io/f/${general.formspreeId}`
+  : 'https://formspree.io/f/xplaceholder';
 
 const inputClass =
   'w-full rounded-md border border-grey-light bg-white px-4 py-3 text-navy placeholder:text-grey focus:border-red focus:outline-none focus:ring-2 focus:ring-red/20';

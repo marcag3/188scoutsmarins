@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PhotoAlbum from '../../components/PhotoAlbum.astro';
+
+export async function getStaticPaths() {
+  const albums = await getCollection('albums');
+
+  return albums.map((album) => ({
+    params: { slug: album.id },
+    props: { album },
+  }));
+}
+
+const { album } = Astro.props;
+const { title, year, cover, images } = album.data;
+const { Content } = await render(album);
+---
+
+<PageLayout title={title} description={`Album photos ${year} — ${title}`}>
+  <PhotoAlbum title={title} year={year} cover={cover} images={images} />
+  <div class="prose-scout mt-10">
+    <Content />
+  </div>
+</PageLayout>

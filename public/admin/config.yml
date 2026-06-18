@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: marcag3/188scoutsmarins
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+locale: fr
+
+collections:
+  - name: pages
+    label: Pages
+    folder: src/content/pages
+    create: true
+    slug: "{{path}}"
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: Chemin URL, name: path, widget: string, hint: "Ex. contact ou a-propos/calendrier (sans slash initial)" }
+      - label: Mise en page
+        name: layout
+        widget: select
+        options:
+          - default
+          - contact
+          - calendar
+          - photos
+          - partners
+        default: default
+      - { label: Contenu, name: body, widget: markdown }
+      - { label: Brouillon, name: draft, widget: boolean, default: false }
+
+  - name: albums
+    label: Albums photos
+    folder: src/content/albums
+    create: true
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    fields:
+      - { label: Titre, name: title, widget: string }
+      - { label: Année, name: year, widget: number }
+      - { label: Couverture, name: cover, widget: image }
+      - label: Images
+        name: images
+        widget: list
+        field: { label: Image, name: image, widget: image }
+      - { label: Contenu, name: body, widget: markdown, required: false }
+
+  - name: settings
+    label: Paramètres
+    files:
+      - name: general
+        label: Général
+        file: src/content/settings/general.json
+        fields:
+          - { label: Slogan, name: tagline, widget: string }
+          - { label: Réunion (texte), name: meetingInfo, widget: string }
+          - label: Réseaux sociaux
+            name: social
+            widget: object
+            fields:
+              - { label: Facebook, name: facebook, widget: string, required: false }
+              - { label: Instagram, name: instagram, widget: string, required: false }
+              - { label: TikTok, name: tiktok, widget: string, required: false }
+          - { label: URL calendrier (embed), name: calendarEmbedUrl, widget: string }
+          - { label: Courriel, name: email, widget: string }
+          - { label: ID Formspree, name: formspreeId, widget: string, required: false, hint: "Identifiant du formulaire Formspree (ex. xyzabcde)" }

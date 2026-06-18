@@ -1,16 +1,12 @@
+import general from '../content/settings/general.json';
+
 export const site = {
   name: '188e groupe de scoutisme marin',
   location: 'Montréal-Nord',
-  tagline:
-    'Nous offrons une chance unique aux jeunes de vivre des activités hors du commun, à la hauteur de leurs ambitions.',
-  meetingInfo:
-    'Réunions les vendredis soir de 19h à 21h au pavillon du parc Henri-Bourassa',
+  tagline: general.tagline,
+  meetingInfo: general.meetingInfo,
   email: '188scoutmarin@gmail.com',
-  social: {
-    facebook: 'https://www.facebook.com/188scoutsmarin',
-    instagram: 'https://www.instagram.com/188scoutsmarin',
-    tiktok: 'https://www.tiktok.com/@188scoutsmarin',
-  },
+  social: general.social,
   affiliation: "Membre de l'association des aventuriers de Baden-Powell",
 } as const;
 
