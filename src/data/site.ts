@@ -23,7 +23,6 @@ export const navigation: NavItem[] = [
     children: [
       { label: 'Inscription', href: '/a-propos/inscription-2/' },
       { label: 'Calendrier', href: '/a-propos/calendrier/' },
-      { label: 'Photos', href: '/a-propos/photos/' },
     ],
   },
   {

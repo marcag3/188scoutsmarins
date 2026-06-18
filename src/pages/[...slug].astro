@@ -3,7 +3,6 @@ import { getCollection, render } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
-import PhotoGrid from '../components/PhotoGrid.astro';
 import PartnerGrid from '../components/PartnerGrid.astro';
 import general from '../content/settings/general.json';
 import { partners } from '../data/partners';
@@ -22,14 +21,6 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 const { title, description, layout } = page.data;
 
-const albums = layout === 'photos' ? await getCollection('albums') : [];
-const photoAlbums = albums.map((album) => ({
-  title: album.data.title,
-  year: album.data.year,
-  cover: album.data.cover,
-  href: `/albums/${album.id}/`,
-}));
-
 ---
 
 <PageLayout title={title} description={description}>
@@ -44,12 +35,6 @@ const photoAlbums = albums.map((album) => ({
   {layout === 'calendar' && (
     <div class="not-prose mt-10">
       <CalendarEmbed src={general.calendarEmbedUrl} />
-    </div>
-  )}
-
-  {layout === 'photos' && (
-    <div class="not-prose mt-10">
-      <PhotoGrid albums={photoAlbums} />
     </div>
   )}
 

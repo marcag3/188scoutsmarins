@@ -12,18 +12,8 @@ const pages = defineCollection({
     navParent: z.string().optional(),
     order: z.number().default(0),
     draft: z.boolean().default(false),
-    layout: z.enum(['default', 'contact', 'calendar', 'photos', 'partners']).default('default'),
+    layout: z.enum(['default', 'contact', 'calendar', 'partners']).default('default'),
   }),
 });
 
-const albums = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/albums' }),
-  schema: z.object({
-    title: z.string(),
-    year: z.number(),
-    cover: z.string(),
-    images: z.array(z.string()),
-  }),
-});
-
-export const collections = { pages, albums };
+export const collections = { pages };

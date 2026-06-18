@@ -6,14 +6,8 @@ import InsetPhoto from '../components/ui/InsetPhoto.astro';
 import StarburstBadge from '../components/ui/StarburstBadge.astro';
 import RedRule from '../components/ui/RedRule.astro';
 import ContactForm from '../components/ContactForm.astro';
-import PhotoGrid from '../components/PhotoGrid.astro';
 import PartnerGrid from '../components/PartnerGrid.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
-
-const placeholderAlbums = [
-  { title: "Camp d'été", year: 2021, cover: '/images/photos/scout-marin10.jpg', href: '#' },
-  { title: 'Base nautique', year: 2024, cover: '/images/photos/20240812_111542.jpg', href: '#' },
-];
 
 const placeholderPartners = [{ name: 'AABP' }, { name: 'Partenaire' }];
 ---
@@ -81,11 +75,6 @@ const placeholderPartners = [{ name: 'AABP' }, { name: 'Partenaire' }];
     <div class="max-w-lg">
       <ContactForm />
     </div>
-  </Section>
-
-  <Section variant="sand" id="photos">
-    <h2 class="marker-lg mb-8 text-navy">Photos</h2>
-    <PhotoGrid albums={placeholderAlbums} />
   </Section>
 
   <Section variant="navy" id="calendar">
