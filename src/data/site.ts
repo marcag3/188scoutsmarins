@@ -12,7 +12,6 @@ export const site = {
   meetingSchedule: general.meetingSchedule,
   meetingLocation: general.meetingLocation,
   meetingInfo: `Réunions les ${sentenceCase(general.meetingSchedule)} au ${sentenceCase(general.meetingLocation)}`,
-  email: '188scoutmarin@gmail.com',
   social: general.social,
   affiliation: "Membre de l'association des aventuriers de Baden-Powell",
 } as const;

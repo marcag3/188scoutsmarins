@@ -46,7 +46,6 @@ Les albums apparaissent sur la page [Photos](/a-propos/photos/) et sur l'accueil
 - Slogan et texte des réunions (accueil, pied de page)
 - Liens Facebook, Instagram, TikTok
 - URL du calendrier intégré
-- Courriel du groupe
 - Identifiant **Formspree** pour le formulaire de contact
 
 ### Formulaire de contact (Formspree)

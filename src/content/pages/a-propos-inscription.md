@@ -18,7 +18,7 @@ La meilleure façon de commencer : **venez nous rencontrer un vendredi soir**. L
 
 **2. Remplissez la fiche d'inscription** — Formulaire médical et administratif (lien ci-dessous).
 
-**3. Envoyez-nous le document** — Par courriel à [188scoutmarin@gmail.com](mailto:188scoutmarin@gmail.com) ou remettez-le en main propre à un chef.
+**3. Envoyez-nous le document** — Via le [formulaire de contact](/contact/) ou remettez-le en main propre à un chef.
 
 Des questions? [Contactez-nous](/contact/).
 
@@ -28,7 +28,7 @@ Des questions? [Contactez-nous](/contact/).
 
 *Éclaireurs repérant les prochaines bouées*
 
-Nous acceptons les inscriptions **tout au long de l'année**. Téléchargez la fiche, remplissez-la et renvoyez-la par courriel ou remettez-la à un chef lors d'une réunion.
+Nous acceptons les inscriptions **tout au long de l'année**. Téléchargez la fiche, remplissez-la et envoyez-la via le [formulaire de contact](/contact/) ou remettez-la à un chef lors d'une réunion.
 
 [Télécharger la fiche médicale et d'inscription (PDF)](/documents/Fiche-medicale-et-dinscription.pdf)
 

@@ -51,5 +51,4 @@ collections:
               - { label: Instagram, name: instagram, widget: string, required: false }
               - { label: TikTok, name: tiktok, widget: string, required: false }
           - { label: URL calendrier (embed), name: calendarEmbedUrl, widget: string }
-          - { label: Courriel, name: email, widget: string }
           - { label: ID Formspree, name: formspreeId, widget: string, required: false, hint: "Identifiant du formulaire Formspree (ex. xyzabcde)" }
